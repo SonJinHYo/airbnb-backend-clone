@@ -178,9 +178,6 @@ class GithubLogIn(APIView):
 
 
 class KakaoLogIn(APIView):
-    def check():
-        pass
-
     def post(self, request):
         try:
             code = request.data.get("code")
