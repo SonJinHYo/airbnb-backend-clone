@@ -343,5 +343,5 @@ class RoomBookingCheck(APIView):
         ).exists()
 
         if exists:
-            return Response({"ok": True})
-        return Response({"ok": False})
+            return Response({"ok": False})
+        return Response({"ok": True})
