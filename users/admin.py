@@ -6,8 +6,25 @@ from .models import User
 @admin.register(User)
 class CustomUserAdmin(UserAdmin):
     fieldsets = (
-        ("Profile",{"fields":("avatar","username","password","name","email","is_host","gender","language","currency"),},),
-        ("Permissions",{
+        (
+            "Profile",
+            {
+                "fields": (
+                    "avatar",
+                    "username",
+                    "password",
+                    "name",
+                    "email",
+                    "is_host",
+                    "gender",
+                    "language",
+                    "currency",
+                ),
+            },
+        ),
+        (
+            "Permissions",
+            {
                 "fields": (
                     "is_active",
                     "is_staff",
@@ -15,5 +32,6 @@ class CustomUserAdmin(UserAdmin):
                     "groups",
                     "user_permissions",
                 ),
-            },)
+            },
+        ),
     )
